@@ -1,0 +1,11 @@
+apiVersion: storage/v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc
+spec:
+  accessModes:
+    - "RWX"
+  storageClassName: nfs
+  resources:
+    requests:
+      storage: 1Gi

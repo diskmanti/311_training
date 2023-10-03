@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: three
+  name: three
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: three
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: three
+    spec:
+      containers:
+        - image: docker.io/library/nginx:latest
+          imagePullPolicy: Always
+          name: nginx
+          command:
+            - ls
+            - "-l"
+            - "/secret"
+          resources:
+            limits:
+              cpu: 100m
+              memory: 128Mi
+            requests:
+              cpu: 100m
+              memory: 128Mi
+          volumeMounts:
+            - name: config
+              readOnly: false
+              mountPath: /config
+            - name: secret
+              readOnly: true
+              mountPath: "/secret"
+            - name: data
+              mountPath: /data
+      volumes:
+        - name: config
+
+          configMap:
+            name: hello
+            items:
+              - key: "sourcesense"
+                path: "sourcesense"
+        - name: secret
+          secret:
+            secretName: world
+            items:
+              - key: "secret"
+                path: "secret"
+        - name: pvc
+          persistentVolumeClaim:
+            claimName: pvc
