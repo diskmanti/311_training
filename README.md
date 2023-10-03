@@ -9,4 +9,4 @@
 - [x] Configurare un image pull secret
 - [x] Controllare scadenza certificati con playbook easy1.mode
 - [ ] Simulare aggiornamento certificati
-- Capire come funziona DNSmasq in Openshift 3.11
+- [ ] Capire come funziona DNSmasq in Openshift 3.11
