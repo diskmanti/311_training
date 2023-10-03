@@ -7,6 +7,6 @@
 1. [x] Utilizzare le varie build strategies https://docs.okd.io/3.11/dev_guide/builds/build_strategies.html
 1. [x] Utilizzare HELM per il deploy di un'applicazione a vostra scelta
 1. [x] Configurare un image pull secret
-1. Controllare scadenza certificati con playbook easy1.mode
-1. Simulare aggiornamento certificati
+1. [x] Controllare scadenza certificati con playbook easy1.mode
+1. [x] Simulare aggiornamento certificati
 1. Capire come funziona DNSmasq in Openshift 3.11
