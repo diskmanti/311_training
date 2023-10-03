@@ -1,0 +1,20 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  name: four
+  namespace: four
+  labels:
+    app: four
+spec:
+  source:
+    type: Git
+    git:
+      uri: https://github.com/stefanprodan
+  strategy:
+    type: Docker                      
+    dockerStrategy:
+      dockerfilePath: Dockerfile 
+  output:
+    to:
+      kind: ImageStreamTag
+      name: podinfo:latest
