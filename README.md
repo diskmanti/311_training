@@ -9,4 +9,8 @@
 1. [x] Configurare un image pull secret
 1. [x] Controllare scadenza certificati con playbook easy1.mode
 1. [x] Simulare aggiornamento certificati
-1. Capire come funziona DNSmasq in Openshift 3.11
+1. [~] Capire come funziona DNSmasq in Openshift 3.11
+    - Sto leggendo tutti i capitoli che riguardano Networking \
+        [Openshift in Action](https://www.manning.com/books/openshift-in-action)
+
+        [OCP 3.11 Docs](https://docs.openshift.com/container-platform/3.11/admin_guide/managing_networking.html)
